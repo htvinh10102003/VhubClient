@@ -7,7 +7,7 @@ export default function LandingPage() {
   const [sessionId, setSessionId] = useState('');
   const router = useRouter();
 
-  const handleJoin = (e) => {
+  const handleJoin = (e : React.FormEvent) => {
     e.preventDefault();
     if (sessionId.trim()) {
       router.push(`/s/${sessionId.toUpperCase()}`);
