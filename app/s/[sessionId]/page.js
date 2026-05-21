@@ -8,6 +8,7 @@ import { io } from 'socket.io-client';
 export default function SessionPage() {
   // Lấy URL từ Vercel, nếu chạy ở máy tính thì dùng mặc định IP LAN
   const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://192.168.0.102:3000';
+  console.log("API_URL hiện tại là:", API_URL);
   const params = useParams();
   const sessionId = params.sessionId;
   
